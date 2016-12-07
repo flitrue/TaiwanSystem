@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <HeaderNav></HeaderNav>
+    <LeftMenu></LeftMenu>
   </div>
 </template>
-
 <script>
-import Hello from './components/Hello'
+  import "../node_modules/bootstrap/less/bootstrap.less";
+  import "../node_modules/font-awesome/less/font-awesome.less";
+  import HeaderNav from './components/Header/Header.vue';
+  import LeftMenu from './components/LeftMenu/LeftMenu.vue';
+  import "../node_modules/bootstrap/dist/js/bootstrap";
 
-export default {
-  name: 'app',
-  components: {
-    Hello
+  export default {
+    name: 'app',
+    data(){
+        return{
+
+            appHight:''
+
+
+
+        }
+    },
+    components: {
+      HeaderNav,LeftMenu
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    border-radius:0px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
