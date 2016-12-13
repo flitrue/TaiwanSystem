@@ -18,8 +18,8 @@
 
 
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#" >热点人物</a></li>
-          <li><a href="#">台湾地区</a></li>
+          <li class="active" v-link="'page1'"><a href="#" >热点人物</a></li>
+          <li><a href="#" v-link="'page2'">台湾地区</a></li>
           <li><a href="#">周边地区</a></li>
           <li><a href="#">大陆地区</a></li>
           <li class="dropdown">
