@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App'
 import jQuery from 'jquery'
-import echarts from  'echarts'
 import router from './configs/routers'
 
 
