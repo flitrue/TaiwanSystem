@@ -18,10 +18,10 @@
 
 
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#" >热点人物</a></li>
-          <li><a href="#">台湾地区</a></li>
-          <li><a href="#">周边地区</a></li>
-          <li><a href="#">大陆地区</a></li>
+          <li class="active"><router-link to="/">热点人物</router-link></li>
+          <li><router-link to="/One">台湾地区</router-link></li>
+          <li><router-link to="/Two">周边地区</router-link></li>
+          <li><router-link to="/">大陆地区</router-link></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人设置 <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -43,15 +43,18 @@
 <script>
 
 
-
-
 export default {
   name: 'HeaderNav',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+
     }
-  }
+  },
+  methods: {
+
+
+  },
 }
 </script>
 
