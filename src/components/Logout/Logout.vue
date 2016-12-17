@@ -1,6 +1,6 @@
 <template>
 
-  <div class="login animated bounceInUp">
+  <div class="logout animated bounceInDown">
     <h2><i class="fa fa-firefox fa-fw"></i>&nbsp;Taiwan</h2>
     <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-user-secret fa-fw"></i>&nbsp;</span>
@@ -15,8 +15,8 @@
     <br>
     <div class="form-group">
 
-        <button type="submit" class="btn btn-info"  href="javascript:void(0);"  @click="login">Login <i class="fa fa-angle-double-right fa-fw"></i>&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type="reset" class="btn btn-info">注册</button>
+        <button type="submit"  class="btn btn-default"  href="javascript:void(0);"  @click="login">Login <i class="fa fa-angle-double-right fa-fw"></i>&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-default" >注册</button>
 
     </div>
 
@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'login',
+  name: 'logout',
   data () {
     return {
       userName: '',
@@ -57,5 +57,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.login{ width:100%; max-width: 300px; height: auto; margin:15% auto; }
+.logout{width:100%; max-width: 300px; height: auto; margin:15% auto;}
 </style>

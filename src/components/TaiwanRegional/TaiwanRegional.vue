@@ -1,7 +1,7 @@
 <template>
-  <div class="home ">
-    <header-nav> </header-nav>
+  <div class="home">
 
+    <header-nav> </header-nav>
     <div class="leftNav">
       <left-menu></left-menu>
     </div>
@@ -9,9 +9,8 @@
       <div class="row">
         <div class="col-xs-12 col-md-12 pull-left ">
           <ol class="breadcrumb panel-t " >
-            <li><a href="#">Home</a></li>
-            <li><a href="#">2013</a></li>
-            <li class="active">十一月</li>
+            <li><a href="#">TaiwanRegional</a></li>
+            <li><a href="#">2016</a></li>
           </ol>
         </div>
       </div>

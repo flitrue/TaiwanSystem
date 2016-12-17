@@ -8,6 +8,7 @@
   import "../node_modules/bootstrap/less/bootstrap.less";
   import "../node_modules/font-awesome/less/font-awesome.less";
   import "../node_modules/bootstrap/dist/js/bootstrap";
+  import "components/animate.less";
 
   export default {
     name: 'app',
@@ -28,7 +29,7 @@
 
 <style>
   #app {
-    min-width: 1100px;
+    /*min-width: 1150px;*/
     border-radius:0px;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
