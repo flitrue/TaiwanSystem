@@ -14,13 +14,11 @@
     name: 'app',
     data(){
         return{
-
             appHight:''
-
-
 
         }
     },
+    mounted(){ console.log('这是mounted的方法');},
     components: {
 
     }

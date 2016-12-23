@@ -87,13 +87,17 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+
   components:{
 
     HeaderNav,LeftMenu
   },
   methods: {
 
-  }
+      asda(){  console.log('12'); }
+
+  },
+  ready(){ this.asda();}
 }
 </script>
 
