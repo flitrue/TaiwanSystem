@@ -48,7 +48,7 @@ export default {
                 //location.hash = '#!/home';
                console.log(this.userName,this.password);
 
-               this.$router.push({name: 'Home'});
+               this.$router.push({name: 'Web'});
 
     }
   },

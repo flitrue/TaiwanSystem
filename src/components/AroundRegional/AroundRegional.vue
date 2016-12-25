@@ -1,10 +1,5 @@
 <template>
-  <div class="home ">
-    <header-nav> </header-nav>
 
-    <div class="leftNav">
-      <left-menu></left-menu>
-    </div>
     <div class="container rightContent">
       <div class="row">
         <div class="col-xs-12 col-md-12 pull-left ">
@@ -71,13 +66,11 @@
     </div>
 
 
-  </div>
+
 
 
 </template>
 <script>
-  import HeaderNav from '../Header/Header.vue';
-  import LeftMenu from '../LeftMenu/LeftMenu.vue';
 export default {
   name: 'Home',
   data () {
@@ -90,14 +83,13 @@ export default {
 
   components:{
 
-    HeaderNav,LeftMenu
+
   },
   methods: {
 
       asda(){  console.log('12'); }
 
-  },
-  ready(){ this.asda();}
+  }
 }
 </script>
 

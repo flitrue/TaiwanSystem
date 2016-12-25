@@ -1,14 +1,17 @@
-<script src="../../BusinessSystem/src/widgets/scrollHandler.js"></script>
+
+<script src="main.js"></script>
 <template>
   <div id="app">
-    <router-view ></router-view>
+    <router-view keep-alive></router-view>
   </div>
 </template>
 <script>
+
   import "../node_modules/bootstrap/less/bootstrap.less";
   import "../node_modules/font-awesome/less/font-awesome.less";
   import "../node_modules/bootstrap/dist/js/bootstrap";
   import "components/animate.less";
+
 
   export default {
     name: 'app',

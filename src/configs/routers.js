@@ -7,6 +7,9 @@ import Hot from '../components/HotCharacters/HotCharacters.vue'
 import Taiwan from '../components/TaiwanRegional/TaiwanRegional.vue'
 import Around from '../components/AroundRegional/AroundRegional.vue'
 import Home from '../components/Home/Home.vue'
+import Web from '../components/Web/Web.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -15,12 +18,17 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     { path: '/', name: 'Login', component: Login },
-    { path: '/Home', name: 'Home', component: Home },
-    { path: '/Hot', name: 'Hot', component: Hot },
-    { path: '/Taiwan', name: 'Taiwan', component: Taiwan },
-    { path: '/Around', name: 'Around', component: Around },
+    { path: '/Web', name: 'Web', component: Web ,
+    children:[
+      { path: 'Home', name: 'Home', component: Home },
+      { path: 'Hot', name: 'Hot', component: Hot },
+      { path: 'Taiwan', name: 'Taiwan', component: Taiwan },
+      { path: 'Around', name: 'Around', component: Around },
+
+    ]},
     { path: '/Logout', name: 'Logout', component: Logout }
   ]
 })
+
 
 export default router

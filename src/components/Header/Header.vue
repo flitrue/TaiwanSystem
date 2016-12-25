@@ -19,10 +19,10 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li class="active">
-            <router-link to="/Hot"><i class="fa fa-globe fa-fw"></i>&nbsp; 热点人物</router-link></li>
-          <li><router-link to="/Taiwan"><i class="fa fa-eercast fa-fw"></i>&nbsp;台湾地区</router-link></li>
-          <li><router-link to="/Around"><i class="fa fa-first-order fa-fw"></i>&nbsp;周边地区</router-link></li>
-          <li><router-link to="/Home"><i class="fa fa-forumbee fa-fw"></i>&nbsp;大陆地区</router-link></li>
+            <router-link to="/Web/Hot" replace><i class="fa fa-globe fa-fw"></i>&nbsp; 热点人物</router-link></li>
+          <li><router-link to="/Web/Taiwan"><i class="fa fa-eercast fa-fw"></i>&nbsp;台湾地区</router-link></li>
+          <li><router-link to="/Web/Around"><i class="fa fa-first-order fa-fw"></i>&nbsp;周边地区</router-link></li>
+          <li><router-link to="/Web/Home"><i class="fa fa-forumbee fa-fw"></i>&nbsp;大陆地区</router-link></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;<i class="fa fa-cog fa-fw"></i>&nbsp;个人设置 <i class="fa fa-angle-down fa-fw"></i></a>
@@ -38,7 +38,7 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-{{msg}}
+
 
 </template>
 
@@ -54,7 +54,6 @@ export default {
     }
   },
   methods: {
-
 
   },
 }
