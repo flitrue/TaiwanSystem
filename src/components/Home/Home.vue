@@ -10,57 +10,34 @@
           </ol>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 ">
-          <div class="panel panel-success ">
-            <div class="panel-heading panel-t ">Panel title</div>
-            <div class="panel-body">
-              Panel content <br><br><br><br><br><br><br>
-            </div>
 
-          </div>
-
-        </div>
-        <div class="col-xs-12 col-md-8 col-lg-8 col-sm-12 ">
-          <div class="panel panel-success ">
-            <div class="panel-heading panel-t ">Panel title</div>
-            <div class="panel-body">
-              Panel content<br><br><br><br><br><br><br>
-            </div>
-
-          </div>
-
-
-
-
-        </div>
-
-      </div>
 
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12 ">
+        <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 ">
           <div class="panel panel-info ">
             <div class="panel-heading panel-t ">Panel title</div>
             <div class="panel-body">
-              Panel content<br><br><br><br><br><br><br>
+              Panel content<br>
+
+我的自定义指令操作的.
+
+              <!--<div class="chart" v-echarts="themeLineOption" :loading="themeLineLoading"  theme="macarons"></div>-->
+
+
+              <div id="hook-arguments-example" v-demo:hello.a.b="message"></div>
+              <hr>
+
+              <div v-wlp:"{sd:}"></div>
+
+
+
+
             </div>
 
           </div>
 
         </div>
-        <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12 ">
-          <div class="panel panel-info ">
-            <div class="panel-heading panel-t ">Panel title</div>
-            <div class="panel-body">
-              Panel content <br><br><br><br><br><br><br>
-            </div>
 
-          </div>
-
-
-
-
-        </div>
 
       </div>
 
@@ -71,13 +48,56 @@
 
 </template>
 <script>
+  import Vue from 'vue'
+//  import echarts from 'echarts'
+//  import Echarts from '../../configs/echarts';
+//  Vue.directive('echarts', Echarts);
+  Vue.directive('demo', {
+    bind: function (el, binding, vnode) {
+      var s = JSON.stringify;
+      el.innerHTML =
+        'name: '       + s(binding.name) + '<br>' +
+        'value: '      + s(binding.value) + '<br>' +
+        'expression: ' + s(binding.expression) + '<br>' +
+        'argument: '   + s(binding.arg) + '<br>' +
+        'modifiers: '  + s(binding.modifiers) + '<br>' +
+        'vnode keys: ' + Object.keys(vnode).join(', ')
+    }
+  });
+  new Vue({
+    el: '#hook-arguments-example',
+    data: {
+      message: 'hello!'
+    }
+  });
+
 
 export default {
+
   name: 'Home',
   data () {
     return {
       userName: '',
       password: '',
+      themeLineLoading:false,
+      themeLineOption: {
+        title: {
+        text: 'ECharts 入门示例'
+      },
+        tooltip: {},
+        legend: {
+          data:['销量']
+        },
+        xAxis: {
+          data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {},
+        series: [{
+          name: '销量',
+          type: 'bar',
+          data: [5, 20, 36, 10, 10, 20]
+        }]
+      },
       msg: 'Welcome to Your Vue.js App'
     }
   },
@@ -86,6 +106,11 @@ export default {
 
   },
   methods: {
+
+  },
+  mounted () {
+
+
 
   }
 }

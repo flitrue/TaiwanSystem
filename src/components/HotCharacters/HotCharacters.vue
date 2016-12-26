@@ -38,6 +38,7 @@
 </template>
 <script type="text/ecmascript-6">
   import echarts from 'echarts'
+  import '../../../node_modules/echarts/theme/roma';
 
   import * as Api  from '../../configs/Api';
 
@@ -160,8 +161,6 @@ export default {
         {'source':6,'target':53,'weight':0.2},],
       itemStyle:{
         normal: {
-
-          color:'#f00',
           shadowColor: 'rgba(220, 220, 220, 0.3)',
           shadowBlur: 10,
           shadowOffsetX: 1,
@@ -178,12 +177,8 @@ export default {
 
   },
 
-
   mounted(){
-
-
-
-      this.$nextTick(function() {
+        this.$nextTick(function() {
         this.drawLine('mycharts');
         var that = this;
         var resizeTimer = null;
@@ -194,8 +189,6 @@ export default {
           }, 200);
         }
       });
-
-
 
 
       this.$http.jsonp("http://118.244.212.122:8008/topic/list",
@@ -233,15 +226,12 @@ export default {
 
 
 
-
-
-
       console.log('这是mounted的方法');},
   methods: {
 
 
     drawLine(id) {
-      this.chart = echarts.init(document.getElementById(id));
+      this.chart = echarts.init(document.getElementById(id),'roma');
       this.chart.setOption({
         title: [{
           text: 'With Modularity',
@@ -249,16 +239,11 @@ export default {
           top: '3%',
           textAlign: 'center'
         }],
-
-
         animation: true,
         backgroundColor:'rgba(4,22,35,0.9)',
-        color:["#bc3c3c","#efbf09","#3fea21","#21ead9","#214bea","#9521ea","#ea21d9"],
-
-
         series: [ {
           name: 'With Modularity',
-
+          color:["#efbf09","#3fea21","#bc3c3c","#21ead9","#214bea","#9521ea","#ea21d9"],
           type: 'graph',
           layout: 'force',
           force: {

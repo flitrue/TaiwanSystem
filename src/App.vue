@@ -8,7 +8,7 @@
 <script>
 
   import "../node_modules/bootstrap/less/bootstrap.less";
-  import "../node_modules/font-awesome/less/font-awesome.less";
+  import "../node_modules/font-awesome/css/font-awesome.css";
   import "../node_modules/bootstrap/dist/js/bootstrap";
   import "components/animate.less";
 

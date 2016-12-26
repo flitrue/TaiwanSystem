@@ -7,6 +7,8 @@ import VueResouse from 'vue-resource'
 import jQuery from 'jquery'
 import router from './configs/routers'
 // import Echarts from './configs/echarts'
+// import Echarts from './configs/echarts';
+// Vue.directive('echarts', Echarts);
 
 
 
