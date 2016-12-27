@@ -7,8 +7,8 @@ import VueResouse from 'vue-resource'
 import jQuery from 'jquery'
 import router from './configs/routers'
 // import Echarts from './configs/echarts'
-// import Echarts from './configs/echarts';
-// Vue.directive('echarts', Echarts);
+import Echarts from './configs/echarts';
+Vue.directive('echarts', Echarts);
 
 
 
@@ -20,7 +20,7 @@ import router from './configs/routers'
 //   components: { App }
 // })
 Vue.use(VueResouse);
-// Vue.directive('echarts', Echarts);
+Vue.directive('echarts', Echarts);
 
 new Vue({
   el: '#app',

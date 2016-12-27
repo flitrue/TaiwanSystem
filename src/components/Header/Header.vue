@@ -19,7 +19,7 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li class="active">
-            <router-link to="/Web/Hot" replace><i class="fa fa-globe fa-fw"></i>&nbsp; 热点人物</router-link></li>
+            <router-link to="/Hot" replace><i class="fa fa-globe fa-fw"></i>&nbsp; 热点人物</router-link></li>
           <li><router-link to="/Web/Taiwan"><i class="fa fa-eercast fa-fw"></i>&nbsp;台湾地区</router-link></li>
           <li><router-link to="/Web/Around"><i class="fa fa-first-order fa-fw"></i>&nbsp;周边地区</router-link></li>
           <li><router-link to="/Web/Home"><i class="fa fa-forumbee fa-fw"></i>&nbsp;大陆地区</router-link></li>

@@ -4,7 +4,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 
-      <router-link to="/Home"> <i class="fa fa-home fa-lg"></i> 首页</router-link>
+      <router-link to="/Taiwan"> <i class="fa fa-home fa-lg"></i> 首页</router-link>
 		</div>
 
 	</div>

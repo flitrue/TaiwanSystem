@@ -21,11 +21,11 @@ const router = new VueRouter({
     { path: '/Web', name: 'Web', component: Web ,
     children:[
       { path: 'Home', name: 'Home', component: Home },
-      { path: 'Hot', name: 'Hot', component: Hot },
       { path: 'Taiwan', name: 'Taiwan', component: Taiwan },
       { path: 'Around', name: 'Around', component: Around },
 
     ]},
+    { path: '/Hot', name: 'Hot', component: Hot },
     { path: '/Logout', name: 'Logout', component: Logout }
   ]
 })

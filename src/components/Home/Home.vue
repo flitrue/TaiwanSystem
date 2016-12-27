@@ -22,17 +22,13 @@
 我的自定义指令操作的.
 
               <!--<div class="chart" v-echarts="themeLineOption" :loading="themeLineLoading"  theme="macarons"></div>-->
+              <div class="chart" v-echarts="{option: themeLineOption ,click:sdf,theme: 'macarons' }"></div>
 
-
-              <div id="hook-arguments-example" v-demo:hello.a.b="message"></div>
               <hr>
-
-              <div v-wlp:"{sd:}"></div>
-
-
 
 
             </div>
+
 
           </div>
 
@@ -52,24 +48,9 @@
 //  import echarts from 'echarts'
 //  import Echarts from '../../configs/echarts';
 //  Vue.directive('echarts', Echarts);
-  Vue.directive('demo', {
-    bind: function (el, binding, vnode) {
-      var s = JSON.stringify;
-      el.innerHTML =
-        'name: '       + s(binding.name) + '<br>' +
-        'value: '      + s(binding.value) + '<br>' +
-        'expression: ' + s(binding.expression) + '<br>' +
-        'argument: '   + s(binding.arg) + '<br>' +
-        'modifiers: '  + s(binding.modifiers) + '<br>' +
-        'vnode keys: ' + Object.keys(vnode).join(', ')
-    }
-  });
-  new Vue({
-    el: '#hook-arguments-example',
-    data: {
-      message: 'hello!'
-    }
-  });
+
+
+
 
 
 export default {
@@ -106,8 +87,12 @@ export default {
 
   },
   methods: {
+      sdf (params) {
+        window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.name));
+      }
+    }
 
-  },
+  ,
   mounted () {
 
 
@@ -119,7 +104,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-  .home{ width: 100%; height: auto; }
+  .chart { width:100%; height:500px; }
   .leftNav{ width: 13%;float: left; }
   .rightContent{ width: 87%; float: left; margin-top: 15px;}
   .panel-t{ text-align: left; border-radius:0px; }

@@ -6,7 +6,6 @@
   </div>
 </template>
 <script>
-
   import "../node_modules/bootstrap/less/bootstrap.less";
   import "../node_modules/font-awesome/css/font-awesome.css";
   import "../node_modules/bootstrap/dist/js/bootstrap";
@@ -22,6 +21,7 @@
         }
     },
     mounted(){ console.log('这是mounted的方法');},
+
     components: {
 
     }
